@@ -59,21 +59,29 @@ From the pooled dataset, **our analysis considered the cohort:**
 
 | Cohort / Study | BioProject ID | Notes |
 |----------------|---------------|-------|
-| NHSII cohort   | **PRJNA1237248** | Selected for reproducibility testing and downstream modeling |
+| NHSII cohort   | **PRJNA1237248** | Selected for reproducibility testing and Building ML Models |
+<img width="1114" height="823" alt="Screenshot 2025-10-01 133147" src="https://github.com/user-attachments/assets/30f7409f-7740-4dac-a905-02a2ad8e16a1" />
+
 
 ---
 
 ## 🚀 How to Use This Repository
 
-1. **Download metadata & profiles**  
-   - [Supplementary metadata (Excel)](https://static-content.springer.com/esm/art%3A10.1038%2Fs41591-025-03693-9/MediaObjects/41591_2025_3693_MOESM2_ESM.xlsx)  
-   - [Zenodo dataset](https://zenodo.org/records/15069069)  
+1. **Prepare The metadata file for the Bioinformatics analysis**  
+   - [Supplementary metadata (Excel)](https://static-content.springer.com/esm/art%3A10.1038%2Fs41591-025-03693-9/MediaObjects/41591_2025_3693_MOESM2_ESM.xlsx)
+   - Collect the metadata of project of interest (We have already collected metadata of **PRJNA1237248** form this supplementary metadata
+    \n and file is uploaded in this folder, you can directly take)
+   - Dowload the respective SRA_RunTable (Also Given in the Folder)
+   - Merge the data of botha the files such that a single Final file must contatin the Runs as well as following Metadata using Excel
+   - To ease the process make use of the python script given
+   - This file we are preparing for ML Analysis .
 
-2. **Reproduce analysis steps**  
-   - Preprocessing of raw reads  
-   - Taxonomic profiling with MetaPhlAn4  
-   - Functional profiling with HUMAnN3.6  
-   - Statistical modeling (classification tasks for CRC vs controls)  
+2. **Reproduce Bioinformatics + Machine Learning analysis steps**  
+   - Preprocessing of raw reads (Fastqc, Fastp, MultiQc) 
+   - Alignment To Reference genome and keeping only non-human reads 
+   - Taxonomic profiling (Kracken2 + Bracken )
+   - Generating the OTU Table by combining the Bracken output
+   - Using This OTU Table + Merged Metadata for effectively Building the models  
 
 3. **Subset analysis**  
    - Our repo scripts focus on **PRJNA1237248** cohort.  
