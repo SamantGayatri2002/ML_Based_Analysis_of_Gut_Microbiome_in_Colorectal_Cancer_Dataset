@@ -74,7 +74,14 @@ From the pooled dataset, **our analysis considered the cohort:**
    - Dowload the respective SRA_RunTable (Also Given in the Folder)
    - Merge the data of botha the files such that a single Final file must contatin the Runs as well as following Metadata using Excel
    - To ease the process make use of the python script given
+     ```
+     df1 = pd.read_excel("PRJNA1237248_metadata.xlsx", sheet_name=0) # for metadata
+     df2 = pd.read_excel("SraRunTable.xlsx", sheet_name=0) # for the sra run id's
+     merged=pd.merge(df2, df1, on="Sample Name")# to merge sra run table with metadata on Sample Name
+     merged.to_excel("Final_metadata_PRJNA1237248.xlsx", index=False) # and save with name
+     ```
    - This file we are preparing for ML Analysis .
+   - while analysing we have taken only reqiured columns like Run, age, sex, BMI, Phenotype , Health_Status and named it as metadata.xlsx.
 
 2. **Reproduce Bioinformatics + Machine Learning analysis steps**  
    - Preprocessing of raw reads (Fastqc, Fastp, MultiQc) 
