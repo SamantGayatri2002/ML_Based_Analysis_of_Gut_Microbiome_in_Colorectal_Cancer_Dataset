@@ -14,8 +14,6 @@ Pooled analysis of 3,741 stool metagenomes from 18 cohorts for cross-stage and s
 **Supplementary Metadata (Excel):**  
 [MOESM2_ESM.xlsx](https://static-content.springer.com/esm/art%3A10.1038%2Fs41591-025-03693-9/MediaObjects/41591_2025_3693_MOESM2_ESM.xlsx)  
 
-**Zenodo Dataset (profiles + metadata):**  
-[10.5281/zenodo.15069069](https://zenodo.org/records/15069069)  
 
 ---
 
@@ -70,7 +68,7 @@ From the pooled dataset, **our analysis considered the cohort:**
 1. **Prepare The metadata file for the Bioinformatics analysis**  
    - [Supplementary metadata (Excel)](https://static-content.springer.com/esm/art%3A10.1038%2Fs41591-025-03693-9/MediaObjects/41591_2025_3693_MOESM2_ESM.xlsx)
    - Collect the metadata of project of interest (We have already collected metadata of **PRJNA1237248** form this supplementary metadata
-    \n and file is uploaded in this folder, you can directly take)
+     and file is uploaded in this folder, you can directly take)
    - Dowload the respective SRA_RunTable (Also Given in the Folder)
    - Merge the data of botha the files such that a single Final file must contatin the Runs as well as following Metadata using Excel
    - To ease the process make use of the python script given
