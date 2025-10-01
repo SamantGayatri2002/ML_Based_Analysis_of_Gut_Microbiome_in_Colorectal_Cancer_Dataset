@@ -48,7 +48,7 @@ bracken --version
 ## 📌 Databases Used
 - Bowtie2: Human genome reference (GRCh38 no-alt analysis set)
 - Kraken2: UHGG v2.0.2 database (standard 8GB version)
-- To install these databases please go to the bottom section of this file
+- To install these databases please go through this file
 -------
 
 # ⚙️ Pipeline Steps (ERR14218664)
@@ -62,7 +62,7 @@ fastqc sra_data/ERR14218664/ERR14218664_pass_1.fastq.gz \
        -o fastqc_output/
 ```
 Output:
-
+<img width="1205" height="270" alt="image" src="https://github.com/user-attachments/assets/3578f966-f3e2-4bef-8140-2fbd17ddc3d4" />
 
 
 HTML and ZIP QC reports (fastqc_output/ERR14218664_pass_*.html)
@@ -84,6 +84,7 @@ fastp -i sra_data/ERR14218664/ERR14218664_pass_1.fastq.gz \
       -h fastp_output/ERR14218664_fastp.html
 ```
 Output:
+<img width="1256" height="266" alt="image" src="https://github.com/user-attachments/assets/73769d43-2a24-41d3-af1b-3f0631e25f38" />
 
 
 Trimmed FASTQ files
@@ -96,7 +97,7 @@ QC reports in JSON and HTML
 
 - First download the Human Reference Genome in the **Home directory** from the link given in the bottom .
 - It can be simple done using the copy adress of the link given in the bottom of the file
-- paste the copied adress infront of wget command
+- paste the copied address infront of wget command
 ```
 wget < copied link >
 ```
@@ -119,6 +120,7 @@ bowtie2 -x GRCh38_noalt_as/GRCh38_noalt_as \
         -S /dev/null -p 8
 ```
 Output:
+<img width="1256" height="363" alt="image" src="https://github.com/user-attachments/assets/dc641721-ce7d-4b7d-a4bb-93093d6d0b7a" />
 
 Non-human paired FASTQ files (ERR14218664_nonhuman.fastq.1.gz, ERR14218664_nonhuman.fastq.2.gz)
 
@@ -130,18 +132,30 @@ In **home directory** create a folder called  kraken_database
 ```
 mkdir -p  kraken_database
 ```
-- Inside this folder , you have to download all the databases of kraken which can be accessed through the link given in the bottom.
-- Use wget command to download each kracken databases
-```
-wget < copied link >
-```
-- This will create a **k2_standard_08_GB_20250714.tar.gz** file
+- Inside this folder , you have to download all the databases of kraken which can be done using link given in the bottom.
+- Use wget command to download kracken databases inside the folder as shown below
 ```
 cd  kraken_database
-wget < copy paste the adress of the database>
+wget < copied link >
 ```
-- Do the same for all the kraken databases
-- The kraken_database folder should contain the following files
+- This will create a **k2_standard_08_GB_20250714.tar.gz** folder
+
+
+To unzip this .tar.gz folder, use the below command
+
+```
+tar -xvzf k2_standard_08_GB_20250714.tar.gz
+```
+here,
+- x → extract
+- v → verbose (shows filenames)
+- z → decompress gzip
+- f → filename
+
+The kraken_database folder should contain the following files
+
+<img width="1661" height="337" alt="image" src="https://github.com/user-attachments/assets/1459dbbe-69c0-4482-b9fa-7153807813d5" />
+
 
 Now come back one step back by
 ```
@@ -161,6 +175,8 @@ kraken2 --db kraken_database --threads 16 \
 ```
 Output:
 
+<img width="1220" height="315" alt="image" src="https://github.com/user-attachments/assets/64ae8430-3c35-4080-8eeb-40765dd89afb" />
+
 Classification report (ERR14218664.k2report)
 
 Classified / unclassified reads
@@ -177,6 +193,8 @@ bracken -d kraken_database \
         -r 100 -l S -t 10
 ```
 Output:
+
+<img width="1307" height="343" alt="image" src="https://github.com/user-attachments/assets/e80d24e4-f601-482d-b4a5-7d8ed7abe6b1" />
 
 Species-level abundance file (ERR14218664.bracken.out)
 
