@@ -33,6 +33,8 @@ prefetch --output-directory sra_data ERR14218891
 prefetch --output-directory sra_data ERR14218664
 prefetch --output-directory sra_data ERR14219004
 ```
+<img width="1113" height="376" alt="SRA_data" src="https://github.com/user-attachments/assets/b6079d8c-92ca-4904-963c-934b31dfa572" />
+
 🔄 Converting to FASTQ
 Next, we converted the .sra files into compressed FASTQ format using fastq-dump.
 
@@ -42,6 +44,8 @@ fastq-dump --outdir sra_data/ERR14218891 --gzip --skip-technical \
   --readids --read-filter pass --dumpbase --split-files --clip \
   sra_data/ERR14218891/ERR14218891.sra
 ```
+<img width="1312" height="400" alt="sra_data_after_splitting" src="https://github.com/user-attachments/assets/778638ac-29fa-43ba-afac-c1efa15870cd" />
+
 We repeated the same for the other two runs (ERR14218664, ERR14219004).
 
 The output consisted of paired FASTQ files (*_1.fastq.gz and *_2.fastq.gz).
