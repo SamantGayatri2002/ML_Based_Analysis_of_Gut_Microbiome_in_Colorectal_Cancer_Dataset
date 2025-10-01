@@ -59,7 +59,7 @@ mkdir -p fastqc_output
 
 fastqc sra_data/ERR14218664/ERR14218664_pass_1.fastq.gz \
        sra_data/ERR14218664/ERR14218664_pass_2.fastq.gz \
-       -o fastqc_output/
+       -o fastqc_results/
 ```
 Output:
 <img width="1205" height="270" alt="image" src="https://github.com/user-attachments/assets/3578f966-f3e2-4bef-8140-2fbd17ddc3d4" />
@@ -208,7 +208,12 @@ Species-level abundance file (ERR14218664.bracken.out)
 - After the entire pipeline the linux terminal should contain all the above folders
 - We can also automate these steps  for multiple samples in one pipeline.
 
+These bracken output files are then combined to generate an OTU Table, which will contains the read counts of each identified species.
 
+Use the given python file to combine the outputs when the data is large.
+```
+python ../combine_bracken_outuptu.py --files  *out -o combined_otu_data.tsv
+```
 ---
 
 ## 📦 Database Requirements
