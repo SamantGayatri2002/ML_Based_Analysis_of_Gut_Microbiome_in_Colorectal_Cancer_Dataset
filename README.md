@@ -44,7 +44,7 @@ ML_Powered_Analysis_of_Gut_Microbiome_in_Colorectal_Cancer/
 ```
 -----
 
-## ⚙️ Workflow Overview
+## ⚙️ Tools and Databases used during the entire pipeline
 
 ### 1️⃣ Data Acquisition (SRA Data)
 
@@ -125,7 +125,7 @@ ML_Powered_Analysis_of_Gut_Microbiome_in_Colorectal_Cancer/
 
   * Random Forest (robust, interpretable feature importance).
   * SVM (good for high-dimensional data).
-  * Neural Networks (when large datasets are available).
+  * KNN , Logistic Regression , XGBoost.
 * **Alternatives**: Statistical methods like LEfSe, DESeq2 for differential abundance.
 
 ---
