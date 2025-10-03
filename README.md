@@ -24,15 +24,15 @@ In this project, we:
 🙌 Acknowledgments
 
 This project was carried out as part of an Online Workshop **" Machine Learning in NGS Data Analysis "**
-Under the guidance of <br> "Bablu Kumar" ( BCD Analytics Hub ), where we were introduced to computational pipelines for microbiome research.<br>
-I thank him for introducing me to metagenomic data analysis pipelines and ML applications in microbiome research.
+Under the guidance of "Bablu Kumar"(BCD Analytics Hub), where we were introduced to computational pipelines for microbiome research.<br>
+I thank the organizers of the workshop for introducing me to metagenomic data analysis pipelines and ML applications in microbiome research.
 
 ---
 📂 Repository Structure
 ML_Powered_Analysis_of_Gut_Microbiome_in_Colorectal_Cancer/
 
 ```
-├── 📁 Meta_Results/                       # Results of QC, taxonomic & abundance analysis
+├── 📁 Meta_Results/                       # Results of QC, taxonomic profiling & abundance analysis
 ├── 📁 Obtaining_and_Preparing_the_metadata/ # Metadata ( Data information, SraRunTable, CRC metadata)
 ├── 📁 Project_Workflow/                   # Scripts for preprocessing pipeline
 ├── 📁 Machine_Learning_(Advanced_Dataset)/ # ML scripts and notebooks
