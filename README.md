@@ -1,12 +1,13 @@
 # ML_Based_Analysis_of_Gut_Microbiome_in_Colorectal_Cancer_Dataset
 
-Shotgun metagenomics based microbiome analysis of Colorectal cancer using Machine Learning classifiers to build predictive diagnostic models and explore gut microbiome signatures.
-This repository documents my learning journey and practice in **shotgun metagenomics data analysis**, focusing on how raw sequencing reads can be processed, analyzed, and interpreted to study microbial communities.
+
+This repository documents my learning journey and practice in **shotgun metagenomics data analysis**, focusing on how raw sequencing reads can be processed, analyzed, and interpreted to study microbial communities along with the integration of Machine Learning pipeline.
 
 
 
 
-### 🧬 Shotgun Metagenomics: From Raw Fastq reads to Microbial features associated with Colorectal Cancer Using Machine Learning.
+## 🧬 Shotgun Metagenomics:
+(From Raw Fastq reads to Microbial features associated with Colorectal Cancer Using Machine Learning.)
 
 
 ----
@@ -26,7 +27,7 @@ This project is part of the **Machine Learning in NGS Data Analysis Workshop** (
 
 ---
 
-# 📂 **Repository Structure**
+## 📂 **Repository Structure**
 
 ```
 **ML_Based_Analysis_of_Gut_Microbiome_in_Colorectal_Cancer_Dataset**/
@@ -47,7 +48,7 @@ This project is part of the **Machine Learning in NGS Data Analysis Workshop** (
 |
 └── **README.md** # Project documentation
 
-
+```
 
 ---
 ## 📊 Workflow Diagram
@@ -164,4 +165,6 @@ This project was part of the online workshop **“Machine Learning in NGS Data A
 ## 📝 Contact 
 
 For queries or collaboration:
+
+Author: Gayatri Sunil Samant<br>
 GitHub: https://github.com/SamantGayatri2002
