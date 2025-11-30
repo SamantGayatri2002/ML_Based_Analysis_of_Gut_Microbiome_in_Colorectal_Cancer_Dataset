@@ -23,7 +23,7 @@ This repository contains a complete workflow combined with machine learning to:
 - Build ML models to effectively classify the Shotgun metagenomic samples 
 - Identify the most important microbial signatures  
 
-This project is part of the **Machine Learning in NGS Data Analysis Workshop** (BCD Analytics Hub) and includes scripts, metadata, taxonomic profiling output, necessary referneces.
+This project includes scripts, metadata, taxonomic profiling output, necessary referneces.
 
 ---
 
@@ -107,7 +107,7 @@ This project is part of the **Machine Learning in NGS Data Analysis Workshop** (
 
 ---
 
-# 🧰 Tools used
+## 🧰 Tools used
 
 These badges represent the primary tools used:
 
