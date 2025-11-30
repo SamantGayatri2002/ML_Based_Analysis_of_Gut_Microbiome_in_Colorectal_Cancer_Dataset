@@ -1,169 +1,167 @@
 # ML_Based_Analysis_of_Gut_Microbiome_in_Colorectal_Cancer_Dataset
+
 Shotgun metagenomics based microbiome analysis of Colorectal cancer using Machine Learning classifiers to build predictive diagnostic models and explore gut microbiome signatures.
 This repository documents my learning journey and practice in **shotgun metagenomics data analysis**, focusing on how raw sequencing reads can be processed, analyzed, and interpreted to study microbial communities.
 
 
 
+
 ### 🧬 Shotgun Metagenomics: From Raw Fastq reads to Microbial features associated with Colorectal Cancer Using Machine Learning.
+
+
 ----
 
-🎯 Introduction
+### **🎯 Introduction**
 
 Shotgun metagenomics allows sequencing of all microbial DNA present in a sample, providing species-level resolution of microbial communities.
 
-In this project, we:
+This repository contains a complete workflow combined with machine learning to:
 
-- Process raw metagenomic reads.
-- Remove host (human) contamination.
-- Classify microbial reads into taxonomic groups.
-- Generate species abundance tables.
-- Prepare data for machine learning classifiers.
+- Profile microbial communities  
+- Quantify species-level abundances  
+- Build ML models to effectively classify the Shotgun metagenomic samples 
+- Identify the most important microbial signatures  
 
----
-
-🙌 Acknowledgments
-
-This project was carried out as part of an Online Workshop **" Machine Learning in NGS Data Analysis "**
-Under the guidance of "Bablu Kumar"(BCD Analytics Hub), where we were introduced to computational pipelines for microbiome research.<br>
-I thank the organizers of the workshop for introducing me to metagenomic data analysis pipelines and ML applications in microbiome research.
+This project is part of the **Machine Learning in NGS Data Analysis Workshop** (BCD Analytics Hub) and includes scripts, metadata, taxonomic profiling output, necessary referneces.
 
 ---
-📂 Repository Structure
-ML_Powered_Analysis_of_Gut_Microbiome_in_Colorectal_Cancer/
+
+# 📂 **Repository Structure**
 
 ```
-├── 📁 Meta_Results/                       # Results of QC, taxonomic profiling & abundance analysis
-├── 📁 Obtaining_and_Preparing_the_metadata/ # Metadata ( Data information, SraRunTable, CRC metadata)
-├── 📁 Project_Workflow/                   # Scripts for preprocessing pipeline
-├── 📁 Machine_Learning_(Advanced_Dataset)/ # ML scripts and notebooks
+**ML_Based_Analysis_of_Gut_Microbiome_in_Colorectal_Cancer_Dataset**/
 │
-├── combine_bracken_outputu.py             # Script to combine Bracken outputs
-├── combined_otu_data.tsv                  # Final OTU/abundance table
-├── ML_analysis.ipynb                      # Jupyter notebook for ML models
-├── README.md                              # Documentation
-```
------
+├── **Meta_Results/** # QC outputs, Kraken2 files, Bracken abundance files
+│
+├── **Obtaining_and_Preparing_the_metadata/** # SRA metadata, phenotype data, metadata cleaning steps
+│
+├── **Project_Workflow/** # Step-by-step bioinformatics pipeline scripts
+│
+├── **Machine_Learning_(Advanced_Dataset)/** # Additional jupitor notebooks, For advanced dataset
+│
+├── **ML_analysis.ipynb** # Main ML workflow
+|
+├── **combine_bracken_outputu.py **# Script to merge species abundance tables
+|
+├── **combined_otu_data.tsv** # Final OTU/species abundance table
+|
+└── **README.md** # Project documentation
 
-## ⚙️ Tools and Databases used during the entire pipeline
 
-### 1️⃣ Data Acquisition (SRA Data)
 
-* **Why**: Public metagenomic datasets are often deposited in repositories like NCBI SRA (Sequence Read Archive). We fetch them to reproduce studies or test pipelines.
-* **How it works**: SRA files are downloaded and converted into FASTQ format for downstream analysis.
-* **Alternatives**:
+---
+## 📊 Workflow Diagram
 
-  * [ENA (European Nucleotide Archive)](https://www.ebi.ac.uk/ena/browser/home)
-  * [MG-RAST](https://www.mg-rast.org/) for public metagenome datasets.
+
+<img width="1024" height="1536" alt="image" src="https://github.com/user-attachments/assets/4956ffdc-2676-4cf4-b740-b83f10839faf" />
+
+
+# 🚀 **Workflow Summary**
+
+### 🔄 **1. Raw Data → Cleaned Reads**
+- Download SRA runs  
+- Perform QC  
+- Remove adapters  
+- Remove human reads (host decontamination)
+
+### 🧬 **2. Species-Level Profiling**
+- Run **Kraken2** for classification  
+- Run **Bracken** for abundance estimation  
+- Merge all Bracken outputs into a master abundance table  
+
+### 📊 **3. Metadata Integration**
+- Link species abundances with CRC metadata  
+- Prepare ML-ready dataset  
+
+### 🤖 **4. Machine Learning**
+- Preprocessing & normalization  
+- Feature selection  
+- Model training (Logistic Regression, Random forest, SVM etc.)  
+- Performance evaluation   
 
 ---
 
-### 2️⃣ Quality Control (FastQC + Fastp)
+### 🔗 Direct Folder/File Links
 
-* **FastQC**
+- **Meta_Results**  
+  https://github.com/SamantGayatri2002/ML_Based_Analysis_of_Gut_Microbiome_in_Colorectal_Cancer_Dataset/tree/main/Meta_Results  
 
-  * **Why**: To assess sequencing quality (per-base quality, GC content, adapter contamination).
-  * **How**: Generates a visual report to highlight issues.
-  * **Alternatives**: MultiQC (for summarizing multiple samples).
+- **Obtaining_and_Preparing_the_metadata**  
+  https://github.com/SamantGayatri2002/ML_Based_Analysis_of_Gut_Microbiome_in_Colorectal_Cancer_Dataset/tree/main/Obtaining_and_Preparing_the_metadata  
 
-* **Fastp**
+- **Project_Workflow**  
+  https://github.com/SamantGayatri2002/ML_Based_Analysis_of_Gut_Microbiome_in_Colorectal_Cancer_Dataset/tree/main/Project_Workflow  
 
-  * **Why**: Performs **trimming, filtering, and adapter removal** to improve data quality before downstream analysis.
-  * **How**: Removes low-quality reads, trims adapters, and generates QC reports.
-  * **Alternatives**:
+- **Machine_Learning_(Advanced_Dataset)**  
+  https://github.com/SamantGayatri2002/ML_Based_Analysis_of_Gut_Microbiome_in_Colorectal_Cancer_Dataset/tree/main/Machine_Learning_(Advanced_Dataset)  
 
-    * Trimmomatic (flexible but slower).
-    * Cutadapt (adapter-focused).
-    * BBDuk (fast and memory-efficient).
+- **combine_bracken_outputu.py**  
+  https://github.com/SamantGayatri2002/ML_Based_Analysis_of_Gut_Microbiome_in_Colorectal_Cancer_Dataset/blob/main/combine_bracken_outputu.py  
 
----
+- **combined_otu_data.tsv**  
+  https://github.com/SamantGayatri2002/ML_Based_Analysis_of_Gut_Microbiome_in_Colorectal_Cancer_Dataset/blob/main/combined_otu_data.tsv  
 
-### 3️⃣ Host Read Removal (Bowtie2)
-
-* **Why**: In human microbiome studies, a large fraction of reads may come from the host (human DNA). Removing them ensures only microbial reads are analyzed.
-* **How**: Aligns reads to the human reference genome (GRCh38). Reads mapping to the host are discarded.
-* **Alternatives**:
-
-  * BWA-MEM (another aligner).
-  * Kraken2 with human reference for classification-based filtering.
-  * HISAT2 (faster but optimized for transcriptomics).
+- **ML_analysis.ipynb**  
+  https://github.com/SamantGayatri2002/ML_Based_Analysis_of_Gut_Microbiome_in_Colorectal_Cancer_Dataset/blob/main/ML_analysis.ipynb  
 
 ---
 
-### 4️⃣ Taxonomic Classification (Kraken2)
+# 🧰 Tools used
 
-* **Why**: Assign reads to microbial taxa to understand community composition.
-* **How**: Uses a k-mer based exact matching algorithm against a database (e.g., **UHGG v2.0.2 for gut microbiome**).
-* **Advantages**: Very fast, scalable, works well on large datasets.
-* **Alternatives**:
+These badges represent the primary tools used:
 
-  * Kaiju (protein-level classification, better for viruses).
-  * MetaPhlAn (marker-gene based, more accurate at species-level, but slower).
-  * Centrifuge (memory-efficient for large databases).
+### 🔧 **Bioinformatics Tools**
+![Kraken2](https://img.shields.io/badge/Kraken2-Metagenomics-blue)
+![Bracken](https://img.shields.io/badge/Bracken-Abundance%20Estimation-green)
+![FastQC](https://img.shields.io/badge/FastQC-Quality%20Control-orange)
+![Bowtie2](https://img.shields.io/badge/Bowtie2-Host%20Decontamination-yellow)
 
----
-
-### 5️⃣ Abundance Estimation (Bracken)
-
-* **Why**: Kraken2 sometimes overestimates species due to shared k-mers. Bracken refines abundance estimates.
-* **How**: Uses Bayesian re-estimation to improve species/strain-level abundance accuracy.
-* **Alternatives**:
-
-  * MetaPhlAn2/3 (direct abundance estimation).
-  * mOTUs profiler (strain-level abundance).
+### 🤖 **Machine Learning Tools and Libraries**
+![Python](https://img.shields.io/badge/Python-3.10+-blue)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-ML%20Models-orange)
+![NumPy](https://img.shields.io/badge/NumPy-Data%20Handling-green)
+![Pandas](https://img.shields.io/badge/Pandas-Data%20Frame%20Processing-yellow)
 
 ---
 
-### 6️⃣ Downstream Analysis & Machine Learning
+## 🎯 Why Shotgun Metagenomics (vs 16S rRNA)  
 
-* **Why**: After generating abundance tables, we can use machine learning to:
-
-  * Predict disease states,
-  * Identify biomarkers,
-  * Explore microbiome-environment associations.
-* **How**: Features = microbial abundances; Labels = phenotype (e.g., disease vs. healthy).
-* **Common Models**:
-
-  * Random Forest (robust, interpretable feature importance).
-  * SVM (good for high-dimensional data).
-  * KNN , Logistic Regression , XGBoost.
-* **Alternatives**: Statistical methods like LEfSe, DESeq2 for differential abundance.
+- Enables species-level (or even strain-level) resolution.  
+- Captures entire genomic content: bacteria, archaea, viruses, fungi — not limited to marker genes.  
+- Allows assessment of functional potential (genes, pathways), beyond taxonomic profiling.
 
 ---
 
-## 📦 Database Requirements
+## 🚀 How to Use / Reproduce  
 
-* **Kraken2 Database**: Unified Human Gastrointestinal Genome (UHGG v2.0.2)
+1. Clone this repository  
+2. Acquire raw sequencing data (or metadata + reads) — as per your data source  
+3. Run preprocessing pipeline in `Project_Workflow/` to generate species abundance tables  
+4. Use `combine_bracken_outputu.py` to aggregate abundances  
+5. Run `ML_analysis.ipynb` to perform ML modelling and analyses  
+6. Review / analyze output performance, important taxa / signatures, etc.  
 
-  * Optimized for gut microbiome studies.
-  * For 8 GB RAM systems: [Download link](https://genome-idx.s3.amazonaws.com/kraken/k2_standard_08_GB_20250714.tar.gz)
-
-* **Reference Genome for Host Removal**: Human GRCh38 no-alt analysis set indexed for Bowtie2.
-
-📄 **Reference**:
-Almeida A., Mitchell A.L., Boland M. *et al.*
-**A unified catalog of 204,938 reference genomes from the human gut microbiome**. *Nature Biotechnology* (2021).
+*(Modify paths, parameters as needed depending on your dataset and resources.)*
 
 ---
 
-## 🔑 Why Shotgun Metagenomics (vs 16S rRNA)?
+## 🧩 Possible Future Directions  
 
-* **Shotgun Advantages**:
-
-  * Provides species- and strain-level resolution.
-  * Captures functional information (genes, pathways).
-  * Detects bacteria, archaea, viruses, fungi.
-
-* **16S Limitations**:
-
-  * Restricted to bacteria and archaea.
-  * Limited to genus-level in many cases.
-  * Cannot reveal functional potential directly.
+- Automate the full pipeline using a workflow manager (e.g. Snakemake or Nextflow)  
+- Expand to functional profiling (gene/pathway-level) using tools like HUMAnN3 or eggNOG‑mapper  
+- Apply to larger cohorts, cross-study validations or external datasets  
+- Explore clustering, diversity analysis, longitudinal data (if available)  
+- Add feature interpretation, biomarker discovery, and robustness analyses  
 
 ---
 
-## 🚀 Future Directions
+## 📄 License & Acknowledgments  
 
-* Automating the pipeline with workflow managers like **Snakemake** or **Nextflow**.
-* Integrating functional profiling tools (e.g., HUMAnN, EggNOG-mapper).
-* Scaling analyses using HPC or cloud computing.
+This project was part of the online workshop **“Machine Learning in NGS Data Analysis”** under guidance of *Bablu Kumar (BCD Analytics Hub)* — many thanks to the organizers for introducing me to computational pipelines for microbiome research.  
 
+---
+
+## 📝 Contact 
+
+For queries or collaboration:
+GitHub: https://github.com/SamantGayatri2002
