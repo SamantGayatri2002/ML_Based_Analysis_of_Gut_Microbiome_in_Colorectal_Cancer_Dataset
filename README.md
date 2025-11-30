@@ -1,10 +1,10 @@
-# 🤖ML_Powered_Analysis_of_Gut_Microbiome_in_Colorectal_Cancer
+# ML_Based_Analysis_of_Gut_Microbiome_in_Colorectal_Cancer_Dataset
 Shotgun metagenomics based microbiome analysis of Colorectal cancer using Machine Learning classifiers to build predictive diagnostic models and explore gut microbiome signatures.
 This repository documents my learning journey and practice in **shotgun metagenomics data analysis**, focusing on how raw sequencing reads can be processed, analyzed, and interpreted to study microbial communities.
 
 
 
-### 🧬 Shotgun Metagenomics: End-to-End Data Analysis Pipeline
+### 🧬 Shotgun Metagenomics: From Raw Fastq reads to Microbial features associated with Colorectal Cancer Using Machine Learning.
 ----
 
 🎯 Introduction
