@@ -1,7 +1,7 @@
 # ML_Based_Analysis_of_Gut_Microbiome_in_Colorectal_Cancer_Dataset
 
 
-This repository documents my learning journey and practice in **shotgun metagenomics data analysis**, focusing on how raw sequencing reads can be processed, analyzed, and interpreted to study microbial communities along with the integration of Machine Learning pipeline.
+This repository documents my learning  in shotgun metagenomic data analysis focusing on sedhow raw sequencing reads can be processprocessednities along with the integration of Machine Learning pipeline.
 
 
 
