@@ -1,16 +1,33 @@
-# ML_Based_Analysis_of_Gut_Microbiome_in_Colorectal_Cancer_Dataset
+# 📊 ML-Based-Analysis-of-Gut-microbiome-in-Colorectal-Cancer-Dataset
+![Reproducible](https://img.shields.io/badge/Workflow-Reproducible-success)
+![Metagenomics](https://img.shields.io/badge/Analysis-Metagenomics-purple)
+![Machine Learning](https://img.shields.io/badge/Workflow-Bioinformactics_+_Machine_Learning-orange)
+![Kraken2](https://img.shields.io/badge/Kraken2-Taxonomic_Classification-blue)
+![Bracken](https://img.shields.io/badge/Bracken-Abundance%20Estimation-green)
+![FastQC](https://img.shields.io/badge/FastQC-Quality%20Control-orange)
+![Bowtie2](https://img.shields.io/badge/Bowtie2-Host%20Decontamination-yellow)
+![Python](https://img.shields.io/badge/Python-3.10+-blue)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-ML%20Models-orange)
+![NumPy](https://img.shields.io/badge/NumPy-Data%20Handling-green)
+![Pandas](https://img.shields.io/badge/Pandas-Data%20Frame%20Processing-yellow)
+![Seaborn](https://img.shields.io/badge/Seaborn-Visualization-teal)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-Plots-yellowgreen)
 
 
-This repository documents my learning  in shotgun metagenomic data analysis focusing on sedhow raw sequencing reads can be processprocessednities along with the integration of Machine Learning pipeline.
+This repository contains a complete workflow for analyzing Gut microbiome data from colorectal cancer (CRC) studies ,using shotgun metagenomic pipeline  and machine learning.
+It includes data preprocessing, taxonomic profiling, feature selection, model training, cross-validation, and performance evaluation. The goal of this project is to identify key microbial signatures associated with CRC and build reliable classification models using real-world microbiome datasets.
+
+The pipeline is fully reproducible, modular, and easy to extend for new datasets or additional machine-learning methods.
+
+
+<br>
+
+## 🧬 Shotgun Metagenomics ( From Raw Reads to Microbial Signatures)
 
 
 
 
-## 🧬 Shotgun Metagenomics:
-(From Raw Fastq reads to Microbial features associated with Colorectal Cancer Using Machine Learning.)
-
-
-----
+<br>
 
 ### **🎯 Introduction**
 
@@ -26,6 +43,7 @@ This repository contains a complete workflow combined with machine learning to:
 This project includes scripts, metadata, taxonomic profiling output, necessary referneces.
 
 ---
+<br>
 
 ## 📂 **Repository Structure**
 
@@ -51,11 +69,14 @@ This project includes scripts, metadata, taxonomic profiling output, necessary r
 ```
 
 ---
+<br>
+
 ## 📊 Workflow Diagram
 
+<img src="https://github.com/user-attachments/assets/4956ffdc-2676-4cf4-b740-b83f10839faf" width="450">
 
-<img width="1024" height="1536" alt="image" src="https://github.com/user-attachments/assets/4956ffdc-2676-4cf4-b740-b83f10839faf" />
 
+<br>
 
 # 🚀 **Workflow Summary**
 
@@ -81,6 +102,7 @@ This project includes scripts, metadata, taxonomic profiling output, necessary r
 - Performance evaluation   
 
 ---
+<br>
 
 ### 🔗 Direct Folder/File Links
 
@@ -105,25 +127,9 @@ This project includes scripts, metadata, taxonomic profiling output, necessary r
 - **ML_analysis.ipynb**  
   https://github.com/SamantGayatri2002/ML_Based_Analysis_of_Gut_Microbiome_in_Colorectal_Cancer_Dataset/blob/main/ML_analysis.ipynb  
 
----
-
-## 🧰 Tools used
-
-These badges represent the primary tools used:
-
-### 🔧 **Bioinformatics Tools**
-![Kraken2](https://img.shields.io/badge/Kraken2-Metagenomics-blue)
-![Bracken](https://img.shields.io/badge/Bracken-Abundance%20Estimation-green)
-![FastQC](https://img.shields.io/badge/FastQC-Quality%20Control-orange)
-![Bowtie2](https://img.shields.io/badge/Bowtie2-Host%20Decontamination-yellow)
-
-### 🤖 **Machine Learning Tools and Libraries**
-![Python](https://img.shields.io/badge/Python-3.10+-blue)
-![scikit-learn](https://img.shields.io/badge/scikit--learn-ML%20Models-orange)
-![NumPy](https://img.shields.io/badge/NumPy-Data%20Handling-green)
-![Pandas](https://img.shields.io/badge/Pandas-Data%20Frame%20Processing-yellow)
 
 ---
+<br>
 
 ## 🎯 Why Shotgun Metagenomics (vs 16S rRNA)  
 
@@ -132,6 +138,7 @@ These badges represent the primary tools used:
 - Allows assessment of functional potential (genes, pathways), beyond taxonomic profiling.
 
 ---
+<br>
 
 ## 🚀 How to Use / Reproduce  
 
@@ -145,6 +152,7 @@ These badges represent the primary tools used:
 *(Modify paths, parameters as needed depending on your dataset and resources.)*
 
 ---
+<br>
 
 ## 🧩 Possible Future Directions  
 
@@ -155,12 +163,14 @@ These badges represent the primary tools used:
 - Add feature interpretation, biomarker discovery, and robustness analyses  
 
 ---
+<br>
 
 ## 📄 License & Acknowledgments  
 
 This project was part of the online workshop **“Machine Learning in NGS Data Analysis”** under guidance of *Bablu Kumar (BCD Analytics Hub)* — many thanks to the organizers for introducing me to computational pipelines for microbiome research.  
 
 ---
+<br>
 
 ## 📝 Contact 
 
