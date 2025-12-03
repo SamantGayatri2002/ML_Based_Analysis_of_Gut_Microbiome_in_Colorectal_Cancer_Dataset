@@ -1,7 +1,7 @@
 # After Downloading the Raw data, we can go through end-to-end shotgun metagenomic pipeline .
 
 
-Here, I a ran each step **individually** to understand the tools and their outputs clearly. If you have enough computational power to handle large amount of datasets and its dependencies, these steps can be combined into an automated script to reduce the manual work.
+Here, I ran each step **individually** to understand the tools and their outputs clearly. If you have enough computational power to handle large amount of datasets and its dependencies, these steps can be combined into an automated script to reduce the manual work.
 
 ---
 
