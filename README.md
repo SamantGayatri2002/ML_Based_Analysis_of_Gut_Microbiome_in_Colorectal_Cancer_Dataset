@@ -1,15 +1,14 @@
 # 📊 ML-Based-Analysis-of-Gut-microbiome-in-Colorectal-Cancer-Dataset
-![Reproducible](https://img.shields.io/badge/Workflow-Reproducible-success)
+
 ![Metagenomics](https://img.shields.io/badge/Analysis-Metagenomics-purple)
-![Machine Learning](https://img.shields.io/badge/Workflow-Bioinformactics_+_Machine_Learning-orange)
-![Kraken2](https://img.shields.io/badge/Kraken2-Taxonomic_Classification-blue)
-![Bracken](https://img.shields.io/badge/Bracken-Abundance%20Estimation-green)
-![FastQC](https://img.shields.io/badge/FastQC-Quality%20Control-orange)
+![FastQC](https://img.shields.io/badge/FastQC-Quality%20Control-red)
 ![Bowtie2](https://img.shields.io/badge/Bowtie2-Host%20Decontamination-yellow)
+![Kraken2](https://img.shields.io/badge/Kraken2-Taxonomic_Classification-pink)
+![Bracken](https://img.shields.io/badge/Bracken-Abundance%20Estimation-green)
 ![Python](https://img.shields.io/badge/Python-3.10+-blue)
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-ML%20Models-orange)
-![NumPy](https://img.shields.io/badge/NumPy-Data%20Handling-green)
-![Pandas](https://img.shields.io/badge/Pandas-Data%20Frame%20Processing-yellow)
+![NumPy](https://img.shields.io/badge/NumPy-Data%20Handling-brown)
+![Pandas](https://img.shields.io/badge/Pandas-Data%20Frame%20Processing-orange)
 ![Seaborn](https://img.shields.io/badge/Seaborn-Visualization-teal)
 ![Matplotlib](https://img.shields.io/badge/Matplotlib-Plots-yellowgreen)
 
